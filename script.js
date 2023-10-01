@@ -1,17 +1,25 @@
-const backgroundMusic = document.getElementById("backgroundMusic");
+const backgroundMusic = document.getElementById('backgroundMusic');
+const apologyBtn = document.getElementById('apologyBtn');
+const musicBtn = document.getElementById('musicBtn');
 
 // Putar musik
-window.addEventListener("load", () => {
-    backgroundMusic.play().catch(error => {
-        console.error("Error playing background music: ", error);
-    });
+function playAudio() {
+  backgroundMusic.play().catch((error) => {
+    console.error('Error playing background music: ', error);
+  });
+}
+
+musicBtn.addEventListener('click', function () {
+  playAudio();
+  // Sembunyikan tombol setelah audio dimulai
+  musicBtn.style.display = 'none';
 });
 
-const apologyBtn = document.getElementById("apologyBtn");
-const apologyMessage = document.querySelector(".apology-message");
-
-apologyBtn.addEventListener("click", function() {
-    apologyBtn.style.display = "none";
-    apologyMessage.classList.remove("hidden");
+apologyBtn.addEventListener('click', function () {
+  playAudio();
+  // Sembunyikan tombol setelah audio dimulai
+  apologyBtn.style.display = 'none';
+  // Tampilkan pesan maaf
+  const apologyMessage = document.querySelector('.apology-message');
+  apologyMessage.classList.remove('hidden');
 });
-
