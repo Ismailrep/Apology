@@ -31,7 +31,23 @@ body {
   margin-bottom: 30px;
 }
 
-button {
+#musicBtn {
+  background-color: #121111;
+  color: rgb(211, 86, 3);
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#musicBtn:hover {
+  background-color: #5f5d5d;
+}
+
+#apologyBtn {
   background-color: #ff6f61;
   color: white;
   padding: 15px 40px;
@@ -42,7 +58,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+#apologyBtn:hover {
   background-color: #ff5449;
 }
 
@@ -59,21 +75,21 @@ button:hover {
 
 @keyframes heartbeat {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
